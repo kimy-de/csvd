@@ -1,17 +1,17 @@
 # cSVD
 Clustered Singular Value Decomposition (cSVD) is a matrix decomposition that factorizes a given dataset using its Singular Value Decomposition (SVD) and reconstructs the features by projection matrices of clustered subsets. In this method, k-means clustering is used to label the whole data into several subsets in a low-dimensional space.
 
-`Step1: SVD of a given dataset` $\rightarrow$ `Step2: Extraction of clustering labels based on low-demensional(reduced) features` $\rightarrow$ `Step3: SVD of each clustered dataset` $\rightarrow$ `Step4: Reconstruction of features by k projection matrices based on clustering labels`
-
 ## 1. SVD
-$\rho=Vv$
+$\rho=Vv$, $v \in D$ (a given dataset)
 
-$v \approx \tilde v=U^\top\rho$
+$v \approx \tilde v=V^\top\rho$
 
 ## 2. cSVD
 $\rho=Vv$
 
-$v \approx \tilde v=W_l(W_lV^\top\rho)$, $l=1,2,\cdots , k.$ ( $k$ is the number of clusters.)
+$v \approx \tilde v=W_l\top(W_lV^\top\rho)$
+
+where $\rho=W_lw$, $w \in D_l$ satisfying $D=\cup_{l=1}^k D_l$, $\cap_{l=1}^k  D_l \neq \emptyset$, $l=1,2,\cdots , k.$ and  $k$ is the number of clusters.
 
 ## 3. Getting started
 ```python
