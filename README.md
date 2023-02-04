@@ -38,7 +38,7 @@ rec_csvd = cs.rec
 - V: a projection matrix V obtained by SVD with the whole data
 - rho: reduced dimensional data
 - labels: clustering labels
-- wlist: a list of k projection matrices Vs obtained by SVD with each clustered dataset
+- wlist: a list of k projection matrices Ws obtained by SVD with each clustered dataset
         
 ## 4. Test
 ### 4.1. Sklearn Datasets 
